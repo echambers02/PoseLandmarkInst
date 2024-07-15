@@ -18,28 +18,6 @@ let enableWebcamButton;
 let webcamRunning = false;
 const videoHeight = "360px";
 const videoWidth = "480px";
-var maxApi = window.max
-if (maxApi) {
-    maxApi.bindInlet("open", function (deviceId) {
-        maxApi.outlet("open", deviceId);
-        enableCam(null, deviceId);
-    });
-    maxApi.bindInlet("landmarkColor", function (color) {
-        landmarkColor = color;
-    });
-    maxApi.bindInlet("connectorColor", function (color) {
-        connectorColor = color;
-    });
-    maxApi.bindInlet("string", function () {
-        var args = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            args[_i] = arguments[_i];
-        }
-        points = args.slice();
-    });
-    document.getElementById("webcamButton").classList.add("hidden");
-    (0, max_bridge_1.bindMaxFunctions)();
-}
 // Before we can use PoseLandmarker class we must wait for it to finish
 // loading. Machine Learning models can be large and take a moment to
 // get everything needed to run.
