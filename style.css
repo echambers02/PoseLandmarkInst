@@ -29,9 +29,16 @@ h2 {
   clear: both;
 }
 
-button {
-  min-width: 200px;
-  height: 50px;
+em {
+  font-weight: bold;
+}
+
+video {
+  clear: both;
+  display: block;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
 }
 
 section {
@@ -39,22 +46,68 @@ section {
   transition: opacity 500ms ease-in-out;
 }
 
-#input {
-  height: 100px;
-  --mdc-theme-primary: #12b5cb;
-  --mdc-theme-on-primary: #f1f3f4;
+header,
+footer {
+  clear: both;
 }
 
-#output {
-  min-height: 100px;
-  min-width: 500px;
-  font-weight: bold;
+.removed {
+  display: none;
 }
 
 .invisible {
   opacity: 0.2;
 }
 
-#submit {
-  margin-top: 20px;
+.note {
+  font-style: italic;
+  font-size: 130%;
+}
+
+.videoView,
+.detectOnClick {
+  position: relative;
+  float: left;
+  width: 48%;
+  margin: 2% 1%;
+  cursor: pointer;
+}
+
+.videoView p,
+.detectOnClick p {
+  position: absolute;
+  padding: 5px;
+  background-color: #007f8b;
+  color: #fff;
+  border: 1px dashed rgba(255, 255, 255, 0.7);
+  z-index: 2;
+  font-size: 12px;
+  margin: 0;
+}
+
+.highlighter {
+  background: rgba(0, 255, 0, 0.25);
+  border: 1px dashed #fff;
+  z-index: 1;
+  position: absolute;
+}
+
+.canvas {
+  z-index: 1;
+  position: absolute;
+  pointer-events: none;
+}
+
+.output_canvas {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+}
+
+.detectOnClick {
+  z-index: 0;
+}
+
+.detectOnClick img {
+  width: 100%;
 }
